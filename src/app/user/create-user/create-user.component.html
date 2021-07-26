@@ -1,0 +1,55 @@
+<br>
+<div class="container-fluid">
+    <form [formGroup]="createUser" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <mat-card>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Full Name</mat-label>
+                        <input matInput name="userName" formControlName="userName" required>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Email Id</mat-label>
+                        <input matInput name="email" formControlName="email" required>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Age</mat-label>
+                        <input matInput name="age" formControlName="age" required>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Phone no.</mat-label>
+                        <input matInput name="phone" formControlName="phone" required>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>D.O.B</mat-label>
+                        <input matInput [matDatepicker]="picker" formControlName="dob" name="dob">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+
+                    <h3>Gender</h3>
+                    <div class="custom-control custom-radio">
+                        <input id="male" type="radio" class="custom-control-input" value="male" name="gender"
+                            formControlName="gender">
+                        <label class="custom-control-label" for="male">Male</label>
+                    </div>
+
+                    <div class="custom-control custom-radio">
+                        <input id="female" type="radio" class="custom-control-input" value="female" name="gender"
+                            formControlName="gender">
+                        <label class="custom-control-label" for="female">Female</label>
+                    </div>
+
+                    <br>
+                    <button mat-raised-button color="primary" type="submit" [disabled]="!createUser.valid">Submit
+                    </button>
+
+                </mat-card>
+            </div>
+        </div>
+    </form>
+</div>

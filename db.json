@@ -1,0 +1,40 @@
+{
+  "user": [
+    {
+      "userName": "Sonu Kumar",
+      "age": "28",
+      "email": "sonu@gmail.com",
+      "phone": "8819849973",
+      "dob": "1993-07-21T18:30:00.000Z",
+      "gender": "male",
+      "id": 1
+    },
+    {
+      "userName": "Rahul",
+      "age": "26",
+      "email": "rahul@gmail.com",
+      "phone": "987678987",
+      "dob": "2034-06-12T18:30:00.000Z",
+      "gender": "male",
+      "id": 2
+    },
+    {
+      "userName": "Vikash",
+      "age": "29",
+      "email": "vikash@gmail.com",
+      "phone": "9878964213",
+      "dob": "2001-06-05T18:30:00.000Z",
+      "gender": "male",
+      "id": 3
+    },
+    {
+      "userName": "Sandeep",
+      "age": "24",
+      "email": "sanddep@gmail.com",
+      "phone": "6789643212",
+      "dob": "2004-01-03T18:30:00.000Z",
+      "gender": "male",
+      "id": 4
+    }
+  ]
+}

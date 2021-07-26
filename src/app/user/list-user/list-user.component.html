@@ -1,0 +1,52 @@
+<!-- Show it when there is no user -->
+<div class="container custom-container-2">
+    <div class="no-data text-center" *ngIf="users.length == 0">
+        <br>
+        <p>There is no User added yet!</p>
+        <button mat-raised-button color="primary" routerLink="/create-user">
+            Add User
+        </button>
+    </div>
+</div>
+
+<br>
+<!-- user list table, it hides when there is no user -->
+<div class="container" *ngIf="users.length !== 0">
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Email Id</th>
+                    <th>Phone no.</th>
+                    <th>Age</th>
+                    <th>D.O.B</th>
+                    <th>Gender</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users">
+                    <td>{{user.userName}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.phone}}</td>
+                    <td>{{user.age}}</td>
+                    <td>{{user.dob }}</td>
+                    <td>{{user.gender}}</td>
+                    <td>
+                        <button mat-raised-button color="primary" routerLink="/single-user/{{user.id}}">
+                            <mat-icon aria-hidden="false">portrait</mat-icon>
+                        </button>
+                        <button mat-raised-button color="primary" routerLink="/edit-user/{{user.id}}"
+                            style="margin-left:10px; margin-right:10px;">
+                            <mat-icon aria-hidden="false">colorize</mat-icon>
+                        </button>
+                        <button mat-raised-button color="primary" (click)="deleteUser(user.id)">
+                            <mat-icon aria-hidden="false">delete</mat-icon>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

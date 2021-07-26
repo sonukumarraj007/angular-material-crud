@@ -25,3 +25,15 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## installed library
+
+1. ng add @angular/material
+
+2. npm install --save @angular/flex-layout @angular/cdk
+
+3.  npm install -g json-server
+
+## For running json-server
+
+`json-server --watch db.json --port 2021`
