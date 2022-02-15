@@ -11,9 +11,9 @@
 
 <br>
 <!-- user list table, it hides when there is no user -->
-<div class="container" *ngIf="users.length !== 0">
+<div class="container table-responsive" *ngIf="users.length !== 0">
     <div class="row">
-        <table class="table">
+        <table class="table table-bordered">
             <thead>
                 <tr>
                     <th>Full Name</th>
@@ -38,7 +38,7 @@
                             <mat-icon aria-hidden="false">portrait</mat-icon>
                         </button>
                         <button mat-raised-button color="primary" routerLink="/edit-user/{{user.id}}"
-                            style="margin-left:10px; margin-right:10px;">
+                            style="margin-left:10px; margin-right:10px;" id="edit-user-btn">
                             <mat-icon aria-hidden="false">colorize</mat-icon>
                         </button>
                         <button mat-raised-button color="primary" (click)="deleteUser(user.id)">
